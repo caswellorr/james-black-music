@@ -1,10 +1,8 @@
-:root {
-  --creme: 	#fffdd0;
-}
-
-
 .home {
   display: flex;
 
+  .content {
+    flex: 6;
+  }
   
 }

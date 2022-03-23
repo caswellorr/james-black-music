@@ -1,0 +1,40 @@
+:root {
+  --creme: 	#fffdd0;
+  --orange: #ed4a00;
+  --shadow: -4px -4px 5px black;
+}
+
+.sidebar {
+  flex: 1;
+  border-right: 0.5px solid rgb(230, 227, 227);
+  min-height: 100vh;
+  background-color: var(--orange);
+
+  .top {
+    padding-left: 10px;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+
+        &:hover {
+          font-size: 55px;
+        }
+
+        span {
+            font-size: 50px;
+            text-shadow: var(--shadow);
+            color: var(--creme);
+            margin-left: 10px;
+        }
+      }
+    }
+  }
+}
