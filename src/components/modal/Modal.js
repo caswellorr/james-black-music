@@ -2,7 +2,12 @@ import './modal.scss';
 
 function Modal() {
   return (
-    <div>Modal</div>
+    <div className='modal'>
+      <div className='modalContainer'>
+      Hello World
+
+      </div>
+    </div>
   )
 }
 
