@@ -1,0 +1,34 @@
+:root {
+  --creme: 	#fffdd0;
+  --orange: #ed4a00;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    // border: 2px solid blue;
+    background-color: var(--orange);
+
+    .wrapper {
+
+      flex: 2;
+      display: flex;
+      // border: 2px solid blue;
+      
+      .content {
+        flex: 5;
+        // border: 2px solid red;
+        margin: 20px 0px 0px 20px;
+        padding-left: 10px;
+
+        img {
+          height: 400px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          
+        }
+      }
+    }
+}

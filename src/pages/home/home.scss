@@ -1,18 +1,35 @@
+:root {
+  --creme: 	#fffdd0;
+  --orange: #ed4a00;
+  --shadow: -4px -4px 5px black;
+}
 
-.home {
+.container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    border: 5px solid red;
+    // border: 2px solid blue;
+    background-color: var(--orange);
 
-    .homeContainer {
+    .wrapper {
 
       flex: 2;
       display: flex;
+      // border: 2px solid blue;
       
       .content {
         flex: 5;
-        border: 1px solid blue;
+        // border: 2px solid red;
+        margin: 20px 0px 0px 20px;
+        padding-left: 10px;
+
+        img {
+          height: 400px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          
+        }
       }
     }
 }

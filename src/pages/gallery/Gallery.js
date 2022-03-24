@@ -1,19 +1,19 @@
-import './home.scss';
+import './gallery.scss';
 
 import image from '../../img/james.png';
 
 import Sidebar from '../../components/sidebar/Sidebar';
 import Header from '../../components/header/Header';
-import Modal from '../../components/modal/Modal';
 
-function Home() {
+
+function Gallery() {
   return (
     <div className='container'>
      <Header />
       <div className='wrapper'>
         <Sidebar />
         <div className='content'>
-          <Modal />
+          Gallery
           <img src={image} alt='' />
         </div>
       </div>
@@ -21,4 +21,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Gallery
