@@ -2,10 +2,15 @@ import React from 'react';
 
 import './App.scss';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-//Components
 import Navbar from './components/navbar/Navbar';
+
+// Pages
+import Home from './pages/home/Home';
+import Bio from './pages/bio/Bio';
+import Gallery from './pages/gallery/Gallery';
+import Subscribe from './pages/subscribe/Subscribe';
 
 // Pages
 
@@ -15,20 +20,23 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Routes>
-          <Route exact path="/">
-            <Route index element={<Home />} />
-          </Route>
-          <Route exact path="/bio">
-            <Route index element={<Bio />} />
-          </Route>
-          <Route exact path="/gallery">
-            <Route index element={<Gallery />} />
-          </Route>
-          <Route exact path="/subscribe">
-            <Route index element={<Subscribe />} />
-          </Route>
-        </Routes>
+        <Navbar />
+        <div className='pages'>
+          <Routes>
+            <Route exact path="/">
+              <Route index element={<Home />} />
+            </Route>
+            <Route path="/bio">
+              <Route index element={<Bio />} />
+            </Route>
+            <Route path="/gallery">
+              <Route index element={<Gallery />} />
+            </Route>
+            <Route path="/subscribe">
+              <Route index element={<Subscribe />} />
+            </Route>
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );

@@ -1,37 +1,61 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './navbar.scss';
+
+import React, { useState } from 'react';
 
 
 function Navbar() {
+
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+
   return (
     <>
     <nav className='navbar'>
       <div className='nav-container'>
-        <Link exact to='/' calssName='nav-logo'>
+        <NavLink 
+          exact to='/' activeClassName='active' className='nav-logo'
+        >
           JB
-        </Link>
-        <ul>
-          <li>
-            <Link exact to='/' calssName='nav-links'>
+        </NavLink>
+        <ul className='nav-menu'>
+          <li className='nav-item'>
+            <NavLink 
+              exact to='/'
+              activeClassName='active' className='nav-links'
+            >
             Home
-          </Link>
+          </NavLink>
           </li>
-          <li>
-            <Link exact to='/bio' calssName='nav-links'>
+          <li className='nav-item'>
+            <NavLink 
+              exact to='/bio'
+              activeClassName='active' className='nav-links'
+            >
             Bio
-          </Link>
+          </NavLink>
           </li>
-          <li>
-            <Link exact to='/gallery' calssName='nav-links'>
+          <li className='nav-item'>
+            <NavLink 
+              exact to='/gallery'
+              activeClassName='active' className='nav-links'
+            >
             Gallery
-          </Link>
+          </NavLink>
           </li>
-          <li>
-            <Link exact to='/subscribe' calssName='nav-links'>
+          <li className='nav-item'>
+            <NavLink 
+              exact to='/subscribe'
+              activeClassName='active' className='nav-links'
+            >
             Subscribe
-          </Link>
+          </NavLink>
           </li>
         </ul>
+        <div className='nav-icon' onClick={handleClick}>
+          <i className={click ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'}></i>
+        </div>
       </div>
     </nav>
 
@@ -40,4 +64,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Navbar;

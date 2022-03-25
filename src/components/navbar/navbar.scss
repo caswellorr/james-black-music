@@ -1,55 +1,74 @@
 @import '../../global.scss';
 
 .navbar {
-  background-color: white;
 
-  color: $mainColor;
-
-  width: 100%;
-  height: 70px;
-  position: fixed;
+  background-color: lightblue;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 20;
 
-  // .wrapper {
-  //   padding: 10px 30px;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    max-width: 1500px;
 
-  //   .left {
-  //     display: flex;
-  //     align-items: center;
+    .nav-logo {
+      color: orange;
+      align-items: center;
+      margin-left: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 2rem;
+      flex-grow: 1;
+    }
 
-  //     .logo {
-  //       font-size: 40px;
-  //       text-decoration: none;
-  //       color: inherit;
-  //       margin-right: 40px;
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      text-align: center;
+      margin-right: 2rem;
 
-  //     }
+      .nav-item {
+        line-height: 40px;
+        margin-right: 1rem;
 
-  //     .itemContainer {
-  //       display: flex;
-  //       align-items: center;
-  //       margin-left: 30px;
-  //     }
-  //   }
+        &:after {
+          content: "";
+          display: block;
+          height: 3px;
+          width: 0;
+          background: transparent;
+          transition: width 0.7s ease, background-color 0.5s ease;
+        }
 
-  //   .right {
+        &:hover:after {
+          width: 100%;
+          background: lightcoral;
+        }
 
-  //     .hamburger {
-  //       width: 32px;
-  //       height: 25px;
+        & .active {
+          color: lightcoral;
+          border: 1px solid lightcoral;
+        }
 
-  //       .span {
-  //         width: 100%;
-  //         height: 3px;
-  //         background-color: $mainColor;
-  //       }
-  //     }
-  //   }
-  // }
+        .nav-links {
+          color: orange;
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          height: 100%;
+          // border-bottom: 3px solid transparent;
+        }
+      }
 
+    }
 
+  }
 }
