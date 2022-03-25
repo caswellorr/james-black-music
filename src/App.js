@@ -14,9 +14,22 @@ function App() {
 
   return (
     <div className='App'>
-      <Router>
-        <Navbar />
-      </Router>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/">
+            <Route index element={<Home />} />
+          </Route>
+          <Route exact path="/bio">
+            <Route index element={<Bio />} />
+          </Route>
+          <Route exact path="/gallery">
+            <Route index element={<Gallery />} />
+          </Route>
+          <Route exact path="/subscribe">
+            <Route index element={<Subscribe />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

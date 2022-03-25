@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import './navbar.scss';
 
+
 function Navbar() {
   return (
     <>
-
     <nav className='navbar'>
       <div className='nav-container'>
         <Link exact to='/' calssName='nav-logo'>
