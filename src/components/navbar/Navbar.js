@@ -19,11 +19,12 @@ function Navbar() {
         >
           JB
         </NavLink>
-        <ul className='nav-menu'>
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
             <NavLink 
               exact to='/'
               activeClassName='active' className='nav-links'
+              onClick={handleClick}
             >
             Home
           </NavLink>
@@ -32,6 +33,7 @@ function Navbar() {
             <NavLink 
               exact to='/bio'
               activeClassName='active' className='nav-links'
+              onClick={handleClick}
             >
             Bio
           </NavLink>
@@ -40,6 +42,7 @@ function Navbar() {
             <NavLink 
               exact to='/gallery'
               activeClassName='active' className='nav-links'
+              onClick={handleClick}
             >
             Gallery
           </NavLink>
@@ -48,13 +51,14 @@ function Navbar() {
             <NavLink 
               exact to='/subscribe'
               activeClassName='active' className='nav-links'
+              onClick={handleClick}
             >
             Subscribe
           </NavLink>
           </li>
         </ul>
         <div className='nav-icon' onClick={handleClick}>
-          <i className={click ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'}></i>
+          <i className={click ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
         </div>
       </div>
     </nav>
