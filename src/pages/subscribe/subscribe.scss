@@ -1,0 +1,78 @@
+@import '../../global.scss';
+
+// @media screen and (max-width: 960px) {
+
+//   .subscribe {
+//     form {
+
+//       .half {
+//         flex-direction: column;
+
+//         .item {
+//           width: 100%;
+//         }
+//       }
+
+//       .full {
+
+//         .action {
+//           display: flex;
+//           flex-direction: column;
+
+//           .input {
+//             margin-bottom: 10px;
+//             width: 100%;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.subscribe {
+  height: 100vh;
+  min-height: 600px;
+
+  .subContainer {
+    height: 100% !important;
+    width: 100%;
+    
+
+    .subRow {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      // margin-right: 15px;
+      // margin-left: 15px;
+
+      .col-left {
+        flex: 2;
+
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+        // position: relative;
+        height: 100vh;
+        // padding-right: 15px;
+        // padding-left: 15px;
+
+        border-right: 4px solid black;
+
+      }
+
+      .col-right {
+        flex: 2;
+
+        display: flex;
+
+        background-color: $primaryColor;
+
+        height: 100vh;
+      }
+    }
+    
+  }
+
+  
+
+}

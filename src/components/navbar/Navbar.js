@@ -17,7 +17,7 @@ function Navbar() {
         <NavLink 
           exact to='/' activeClassName='active' className='nav-logo'
         >
-          JB
+          james black
         </NavLink>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
@@ -26,7 +26,7 @@ function Navbar() {
               activeClassName='active' className='nav-links'
               onClick={handleClick}
             >
-            Home
+            home
           </NavLink>
           </li>
           <li className='nav-item'>
@@ -35,7 +35,7 @@ function Navbar() {
               activeClassName='active' className='nav-links'
               onClick={handleClick}
             >
-            Bio
+            bio
           </NavLink>
           </li>
           <li className='nav-item'>
@@ -44,7 +44,7 @@ function Navbar() {
               activeClassName='active' className='nav-links'
               onClick={handleClick}
             >
-            Gallery
+            gallery
           </NavLink>
           </li>
           <li className='nav-item'>
@@ -53,7 +53,7 @@ function Navbar() {
               activeClassName='active' className='nav-links'
               onClick={handleClick}
             >
-            Subscribe
+            subscribe
           </NavLink>
           </li>
         </ul>

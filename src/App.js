@@ -18,7 +18,7 @@ import Subscribe from './pages/subscribe/Subscribe';
 function App() {
 
   return (
-    <div className='App'>
+    <main className='App'>
       <BrowserRouter>
         <Navbar />
         <div className='pages'>
@@ -38,7 +38,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
-    </div>
+    </main>
   );
 }
 
