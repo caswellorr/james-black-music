@@ -1,34 +1,36 @@
 import './subscribe.scss';
 
 import background from '../../img/colorfulJames.jpg';
-import { convertLength } from '@mui/material/styles/cssUtils';
+
 
 
 function Subscribe() {
   return (
     <section className='subscribe'>
       <div className='subContainer'>
-        <div className='subRow'>
-          <div className='col-left' 
+          <div className='left' 
             style={{ 
               backgroundImage: `url(${background})`, 
               backgroundSize: 'contain',
-              backgroundRepeat: 'center',
               backgroundPosition: 'center'
-              
-
                }}>
           </div>
-          <div className='col-right'>
-            <div className='form'>
-              <h2>Subscribe</h2>
+          <div className='right'>
+            <div className='subForm'>
+              <div className='form-title'>
+                <h2>subscribe</h2>
+              </div>
               <form action='' name='subscribe-form'>
-                <input type='text' name='email' />
-                <input type='submit' value='Submit' name='subscribe' className='subBtn' />
+                <div className='email-section'>
+                  <label className="email animation">
+                    <input type="email" placeholder="&nbsp;"/>
+                    <span className="placeholder">email address</span>
+                  </label>
+                </div>
+                <button className='subBtn'>submit</button>
               </form>
             </div>
           </div>
-        </div>
       </div>
     </section>
   )

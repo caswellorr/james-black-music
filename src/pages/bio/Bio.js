@@ -2,9 +2,9 @@ import './bio.scss';
 
 function Bio() {
   return (
-    <div className='bio'>
+    <section className='bio'>
       Bio
-    </div>
+    </section>
   )
 }
 

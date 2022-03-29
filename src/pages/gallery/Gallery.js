@@ -2,9 +2,9 @@ import './gallery.scss';
 
 function Gallery() {
   return (
-    <div>
+    <section className='gallery'>
       <h1>Gallery</h1>
-    </div>
+    </section>
   )
 }
 

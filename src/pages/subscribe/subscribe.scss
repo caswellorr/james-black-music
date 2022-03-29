@@ -1,4 +1,158 @@
-@import '../../global.scss';
+@import "../../global.scss";
+
+.subscribe {
+  height: 100%;
+  min-height: 600px;
+
+  .subContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    .left {
+      flex: 2;
+
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      border-right: 4px solid black;
+    }
+
+    .right {
+      flex: 2;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $primaryColor;
+
+      .subForm {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .form-title {
+          color: $secondaryColor;
+          font-size: 2.5rem;
+          padding: 20px;
+        }
+
+        .email-section {
+          color: $secondaryColor;
+          margin-bottom: 20px;
+
+
+          .email {
+
+            position: relative;
+            font-size: 14px;
+            border-top: 20px solid transparent;
+            margin-bottom: 5px;
+            --field-padding: 10px;
+
+            input {
+              border: 2px solid black;
+              -webkit-appearance: none;
+              -ms-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              background: #f2f2f2;
+              padding: var(--field-padding);
+              border-radius: 3px;
+              width: 250px;
+              outline: none;
+              font-size: 14px;
+
+              .dirty + .placeholder,
+              &:focus + .placeholder,
+              &:not(:placeholder-shown) + .placeholder {
+                top: -20px;
+                font-size: 15px;
+                color: $secondaryColor;
+              }
+
+            }
+
+            .placeholder {
+              position: absolute;
+              left: var(--field-padding);
+              width: calc(100% - (var(--field-padding) * 2));
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              top: 10px;
+              line-height: 100%;
+              transform: translateY(-50%);
+              color: #aaa;
+              transition: 
+                top 0.3s ease,
+                color 0.3s ease,
+                font-size 0.3s ease;
+            }
+
+
+
+          }
+  
+          .email.animation input {
+            border-radius: 0;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            background:
+              linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
+              linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+              linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+            transition: background-size 0.3s ease;
+          }
+          
+          .email.animation input.dirty,
+          .email.animation input:not(:placeholder-shown),
+          .email.animation input:focus {
+            background-size: 100% 0.15em, 100% 0.1em, 100%;
+          }
+        }
+
+
+
+          
+
+          // input {
+          //   border: 2px solid black;
+          //   border-radius: 3px;
+          //   width: 300px;
+          //   text-align: center;
+          //   color: black !important;
+          //   letter-spacing: 1px;
+          //   font-size: 15px;
+          //   margin: auto;
+          //   text-indent: 2%;
+          //   padding: 4px;
+
+          //   &:hover {
+          //     background-color: #dcdcdc;
+          //   }
+          // }
+
+        .subBtn {
+          cursor: pointer;
+          display: inline-block;
+          line-height: 32px;
+          margin: 0 5px 10px 0;
+          text-align: center;
+          letter-spacing: 1px;
+          border: 2px solid black;
+          padding: 2px 15px;
+          border-radius: 24px;
+          font-size: 15px;
+
+          &:hover {
+            background-color: #dcdcdc;
+          }
+        }
+      }
+    }
+  }
+}
 
 // @media screen and (max-width: 960px) {
 
@@ -28,51 +182,3 @@
 //     }
 //   }
 // }
-
-.subscribe {
-  height: 100vh;
-  min-height: 600px;
-
-  .subContainer {
-    height: 100% !important;
-    width: 100%;
-    
-
-    .subRow {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      // margin-right: 15px;
-      // margin-left: 15px;
-
-      .col-left {
-        flex: 2;
-
-        display: flex;
-        // align-items: center;
-        justify-content: center;
-        // position: relative;
-        height: 100vh;
-        // padding-right: 15px;
-        // padding-left: 15px;
-
-        border-right: 4px solid black;
-
-      }
-
-      .col-right {
-        flex: 2;
-
-        display: flex;
-
-        background-color: $primaryColor;
-
-        height: 100vh;
-      }
-    }
-    
-  }
-
-  
-
-}

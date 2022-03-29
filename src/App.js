@@ -37,6 +37,7 @@ function App() {
             </Route>
           </Routes>
         </div>
+        {/* <Navbar /> */}
       </BrowserRouter>
     </main>
   );

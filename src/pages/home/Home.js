@@ -2,9 +2,9 @@ import './home.scss';
 
 function Home() {
   return (
-    <div className='home'>
+    <section className='home'>
       <h1>Home</h1>
-    </div>
+    </section>
   )
 }
 

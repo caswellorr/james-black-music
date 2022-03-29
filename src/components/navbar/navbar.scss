@@ -29,6 +29,7 @@
       text-decoration: none;
       font-size: 2rem;
       flex-grow: 1;
+      display: none;
 
     }
 
@@ -41,13 +42,14 @@
       .nav-item {
         line-height: 40px;
         margin-right: 1rem;
+        padding: 1rem;
 
         &:after {
           content: "";
           display: block;
           height: 3px;
           width: 0;
-          background: transparent;
+          background: $primaryColor;
           transition: width 0.7s ease, background-color 0.5s ease;
         }
 
@@ -82,14 +84,23 @@
 
   .navbar {
 
-    background-color: #1f5156;
+    background-color: $primaryColor;
+    height: 90px;
 
     .nav-container {
+
+      .nav-logo {
+        display: flex;
+        justify-content: center;
+        color: $secondaryColor;
+        font-size: 3rem;
+      }
 
       .nav-menu {
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: 100vh;
         border-top: 1px solid #fff;
         position: absolute;
         top: 80%;
@@ -98,23 +109,23 @@
   
           // must attach active class for media queries i guess...
         &.active {
-          background: red;
+          background: $secondaryColor;
           left: 0px;
           opacity: 1;
-          transition: all 0.5s ease;
+          transition: all 0.7s ease;
           z-index: 1;
   
         }
 
         .nav-item.active {
-          color: #ffdd40;
+          color: $secondaryColor;
           border: none;
         }
 
         .nav-links {
           padding: 1.5rem;
           width: 100%;
-          display: table;
+          font-size: 2rem;;
         }
       }
   
@@ -126,7 +137,7 @@
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #ffdd40;
+        color: $secondaryColor;
       }
 
     }
