@@ -149,6 +149,20 @@
             background-color: #dcdcdc;
           }
         }
+
+        .terms-modal {
+          
+          position: 'relative';
+          z-index: 1;
+
+          .termsBtn {
+            border: none;
+            background-color: transparent;
+            text-decoration: underline;
+          }
+        }
+
+
       }
     }
   }

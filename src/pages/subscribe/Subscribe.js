@@ -1,10 +1,17 @@
 import './subscribe.scss';
-
 import background from '../../img/colorfulJames.jpg';
+
+import React, { useState } from 'react';
+
+import Modal from '../../components/modal/Modal';
+
 
 
 
 function Subscribe() {
+
+const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className='subscribe'>
       <div className='subContainer'>
@@ -27,8 +34,22 @@ function Subscribe() {
                     <span className="placeholder">email address</span>
                   </label>
                 </div>
-                <button className='subBtn'>submit</button>
+                <div className='subscribe-button'>
+                  <button className='subBtn'>
+                    submit
+                  </button>
+                </div>
               </form>
+                <div className='terms-modal'>
+                  <button
+                    className='termsBtn'
+                    onClick={() => setIsOpen(true)}>
+                  terms
+                  </button>
+                  <Modal 
+                  open={isOpen} 
+                  onClose={() => setIsOpen(false)} />
+                </div>
             </div>
           </div>
       </div>
