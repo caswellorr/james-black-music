@@ -1,9 +1,71 @@
+@import "../../global.scss";
+
 .modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: $primaryColor;
+  transition: center 2.0s ease-in;
+  background-color: $secondaryColor;
   padding: 50px;
+  z-index: 1000;
+  
+  height: 40%px;
+  width: 20%;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Courier New', Courier, monospace;
+
+  .modal-content {
+    text-align: center;
+    
+    .modal-header {
+      
+      .close-Btn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: black;
+      }
+    }
+
+    .modal-body {
+
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+    }
+  }
+  
+
+  // .modal-content {
+
+  //   text-align: center;
+
+  //   h3 {
+  //     font-size: 32px;
+  //   }
+  // }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
   z-index: 1000;
 }

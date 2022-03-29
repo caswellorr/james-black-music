@@ -40,16 +40,16 @@ const [isOpen, setIsOpen] = useState(false);
                   </button>
                 </div>
               </form>
-                <div className='terms-modal'>
-                  <button
-                    className='termsBtn'
-                    onClick={() => setIsOpen(true)}>
-                  terms
-                  </button>
-                  <Modal 
-                  open={isOpen} 
-                  onClose={() => setIsOpen(false)} />
-                </div>
+              <div className='terms-modal'>
+                <button
+                  className='termsBtn'
+                  onClick={() => setIsOpen(true)}>
+                terms
+                </button>
+                <Modal 
+                open={isOpen} 
+                onClose={() => setIsOpen(false)} />
+              </div>
             </div>
           </div>
       </div>

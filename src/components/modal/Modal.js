@@ -1,18 +1,33 @@
-import React from 'react'
+import './modal.scss';
 
-function Modal({ open, children, onClose }) {
+import ReactDOM from "react-dom";
+
+function Modal({ open, onClose }) {
 
   if (!open) return null;
   
-  return (
+  return ReactDOM.createPortal (
     <>
-      <div className='overlay'></div>
+      <div className='overlay' onClick={onClose}></div>
 
       <div className='modal'>
-        <button onClick={onClose}>Close Modal</button>
-        { children }
+        <div className='modal-content'>
+          <div className='modal-header'>
+            <i className="close-Btn fa-solid fa-xmark" onClick={onClose}></i>
+          </div>
+          <div className='modal-body'>
+            <h3>terms</h3>
+            <p>
+              By signing up, I agree to receive personalized marketing messages and updates about James Black. I acknowledge that I can opt-out at any time by emailing jamesblack@gmail.com.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
+    </>,
+
+    document.getElementById('portal')
+
+
     )
 }
 
