@@ -20,6 +20,13 @@ function Subscribe(props) {
   
   const [isOpen, setIsOpen] = useState(false);
 
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ formValues, [ name ]: value });
+    console.log(formValues);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
@@ -33,24 +40,22 @@ function Subscribe(props) {
       console.log(formValues);
     }
 
-  }, [ formErrors ])
+  }, [ formErrors ]);
 
   const validate = (values) => {
     const errors = {};
-    const regex = /^[^\s@]+@{^\s@}+\.[^\s@]{2,}$/i;
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
     if(!values.email) {
-      errors.email = "Email is required"
+      errors.email = "Email is required!"
+    } else if (!regex.test(values.email)) {
+      errors.email = "Please enter a valid email."
     }
 
-    return errors
-  }
+    return errors;
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ formValues, [ name ]: value });
-    console.log(formValues);
   };
+
 
   return (
     <section className='subscribe'>
@@ -72,13 +77,14 @@ function Subscribe(props) {
                 <div className='email-section'>
                   <label className="email animation">
                     <input 
-                      type="email"
+                      className='email'
+                      type="text"
                       name="email"
                       value={ formValues.email }
                       onChange={handleChange}
                       placeholder="&nbsp;"/>
                     <span className="placeholder">email address</span>
-                    <span className='form-error'>{  }</span>
+                    <p className='form-error'>{ formErrors.email }</p>
                   </label>
                 </div>
                 <div className='subscribe-button'>

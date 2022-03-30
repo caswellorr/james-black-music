@@ -42,7 +42,6 @@
           color: $secondaryColor;
           margin-bottom: 20px;
 
-
           .email {
 
             position: relative;
@@ -89,6 +88,10 @@
                 top 0.3s ease,
                 color 0.3s ease,
                 font-size 0.3s ease;
+            }
+
+            .form-error {
+              color: rgb(236, 32, 32);
             }
 
 
@@ -169,31 +172,13 @@
   }
 }
 
-// @media screen and (max-width: 960px) {
+@media screen and (max-width: 960px) {
 
-//   .subscribe {
-//     form {
+  .subscribe {
 
-//       .half {
-//         flex-direction: column;
+    .subcontainer {
 
-//         .item {
-//           width: 100%;
-//         }
-//       }
-
-//       .full {
-
-//         .action {
-//           display: flex;
-//           flex-direction: column;
-
-//           .input {
-//             margin-bottom: 10px;
-//             width: 100%;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+    }
+  }
+   
+}
