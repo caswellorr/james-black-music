@@ -105,7 +105,14 @@
       background-color: #dcdcdc;
     }
   }
+}
 
-  
+@media screen and (max-width: 960px) {
 
+  .subForm {
+
+    .form-title {
+      font-size: 2rem;
+    }
+  }
 }

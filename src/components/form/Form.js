@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 
 function Form() {
 
-
   const intialState = {
     email: ''
   };
@@ -49,30 +48,30 @@ function Form() {
   };
   return (
     <div className='subForm'>
-              <div className='form-title'>
-                <h2>subscribe</h2>
-              </div>
-              <form 
-                onSubmit={handleSubmit}>
-                <div className='email-section'>
-                  <label className="email animation">
-                    <input 
-                      className='email'
-                      type="text"
-                      name="email"
-                      value={ formValues.email }
-                      onChange={handleChange}
-                      placeholder="&nbsp;"/>
-                    <span className="placeholder">email address</span>
-                    <p className='form-error'>{ formErrors.email }</p>
-                  </label>
-                </div>
-                <div className='subscribe-button'>
-                  <button className='subBtn'>
-                    submit
-                  </button>
-                </div>
-              </form>
+       <div className='form-title'>
+         <h2>subscribe</h2>
+       </div>
+       <form 
+         onSubmit={handleSubmit}>
+         <div className='email-section'>
+           <label className="email animation">
+             <input 
+               className='email'
+               type="text"
+               name="email"
+               value={ formValues.email }
+               onChange={handleChange}
+               placeholder="&nbsp;"/>
+             <span className="placeholder">email address</span>
+             <p className='form-error'>{ formErrors.email }</p>
+           </label>
+         </div>
+         <div className='subscribe-button'>
+           <button className='subBtn'>
+             submit
+           </button>
+         </div>
+       </form>
       </div>
   )
 }

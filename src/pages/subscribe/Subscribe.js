@@ -17,29 +17,30 @@ function Subscribe(props) {
   return (
     <section className='subscribe'>
       <div className='subContainer'>
-          <div className='left' 
-            style={{ 
-              backgroundImage: `url(${background})`, 
-              backgroundSize: 'contain',
-              backgroundPosition: 'center'
-               }}>
-          </div>
-          <div className='right'>
-            <Form />
-              <div className='terms-modal'>
-                <button
-                  className='termsBtn'
-                  onClick={() => setIsOpen(true)}>
-                terms
-                </button>
-                <Modal 
-                open={isOpen} 
-                onClose={() => setIsOpen(false)} />
-              </div>
-          </div>
+         <div className='left' 
+           style={{ 
+             backgroundImage: `url(${background})`, 
+             backgroundSize: 'contain',
+             backgroundPosition: 'center'
+              }}>
+         </div>
+         <div className='right'>
+           <Form />
+           <div className='terms-button'>
+            <button
+                className='termsBtn'
+                onClick={() => setIsOpen(true)}>
+              terms
+            </button>
+           </div>
+           <Modal
+             className='terms-modal' 
+             open={isOpen} 
+             onClose={() => setIsOpen(false)} />
+         </div>
       </div>
     </section>
   )
 }
 
-export default Subscribe
+export default Subscribe;
