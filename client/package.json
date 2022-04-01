@@ -2,6 +2,8 @@
   "name": "james-black-portfolio",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
+  "homepage": "https://james-black-music.herokuapp.com/",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",

@@ -1,4 +1,5 @@
 import './bio.scss';
+import { jamesBio } from '../../jamesData';
 
 function Bio() {
   return (
@@ -8,4 +9,4 @@ function Bio() {
   )
 }
 
-export default Bio
+export default Bio;

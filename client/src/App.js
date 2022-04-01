@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './App.scss';
 
@@ -17,8 +17,17 @@ import Subscribe from './pages/subscribe/Subscribe';
 
 function App() {
 
+  // const [data, setdata] = useState(null);
+
+  // useEffect(() => {
+  //   fetch('/api')
+  //     .then((res) => res.json())
+  //     .then((data) => setdata(data.message));
+  // }, []);
+
   return (
     <main className='App'>
+      {/* <p>{!data ? "Loading..." : data}</p> */}
       <BrowserRouter>
         <Navbar />
         <div className='pages'>

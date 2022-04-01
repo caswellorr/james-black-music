@@ -11,11 +11,11 @@
     padding: 20px;
   }
 
-  .email-section {
+  .inputs-section {
     color: $secondaryColor;
     margin-bottom: 20px;
 
-    .email {
+    .subscribeInput {
 
       position: relative;
       font-size: 14px;
@@ -25,6 +25,8 @@
 
       input {
         border: 2px solid black;
+        margin-bottom: 20px;
+        margin-top: 10px;
         -webkit-appearance: none;
         -ms-appearance: none;
         -moz-appearance: none;
@@ -71,7 +73,7 @@
 
     }
 
-    .email.animation input {
+    .subscribeInput.animation input {
       border-radius: 0;
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
@@ -82,9 +84,9 @@
       transition: background-size 0.3s ease;
     }
     
-    .email.animation input.dirty,
-    .email.animation input:not(:placeholder-shown),
-    .email.animation input:focus {
+    .subscribeInput.animation input.dirty,
+    .subscribeInput.animation input:not(:placeholder-shown),
+    .subscribeInput.animation input:focus {
       background-size: 100% 0.15em, 100% 0.1em, 100%;
     }
   }
@@ -100,6 +102,7 @@
     padding: 2px 15px;
     border-radius: 24px;
     font-size: 15px;
+    text-decoration: none;
 
     &:hover {
       background-color: #dcdcdc;

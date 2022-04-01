@@ -1,4 +1,69 @@
+@import '../../global.scss';
+
 .home {
   height: calc(100vh - 80px);
   min-height: 600px;
+
+  display: flex;
+  // align-items: center;
+
+  .title {
+
+    font-size: 75px;
+    color: $secondaryColor;
+    text-shadow: -4px -4px 2px black;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+
+
+  }
+
+  .portrait {
+
+    height: 90%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+
+    img {
+      height: 100%;
+
+    }
+  }
+
+}
+
+@media screen and (max-width: 960px) {
+
+  .home {
+
+    height: calc(100vh - 90px);
+
+    .media-component {
+      display: none;
+    }
+
+    .title {
+      display: none;
+    }
+
+    .portrait {
+
+      height: 100%;
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+
+    img {
+      height: 100%;
+
+    }
+
+    }
+  }
 }

@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 function Form() {
 
   const intialState = {
+    name: '',
     email: ''
   };
 
@@ -14,7 +15,7 @@ function Form() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormValues({ formValues, [ name ]: value });
+    setFormValues({ ...formValues, [ name ]: value });
     console.log(formValues);
   };
 
@@ -42,6 +43,12 @@ function Form() {
     } else if (!regex.test(values.email)) {
       errors.email = "Please enter a valid email."
     }
+    
+    if(!values.name) {
+      errors.name = "Name is required!"
+    } else if (!regex.test(values.name)) {
+      errors.name = "Please enter your name."
+    }
 
     return errors;
 
@@ -53,10 +60,21 @@ function Form() {
        </div>
        <form 
          onSubmit={handleSubmit}>
-         <div className='email-section'>
-           <label className="email animation">
+         <div className='inputs-section'>
+           {/* <label className="subscribeInput animation">
              <input 
-               className='email'
+               
+               type="text"
+               name="name"
+               value={ formValues.name }
+               onChange={handleChange}
+               placeholder="&nbsp;"/>
+             <span className="placeholder">name</span>
+             <p className='form-error'>{ formErrors.name }</p>
+           </label> */}
+           <label className="subscribeInput animation">
+             <input 
+              
                type="text"
                name="email"
                value={ formValues.email }

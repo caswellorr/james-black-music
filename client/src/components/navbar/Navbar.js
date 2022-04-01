@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './navbar.scss';
 
 import React, { useState } from 'react';
+import Media from '../media/Media';
 
 
 function Navbar() {
@@ -55,6 +56,9 @@ function Navbar() {
             >
             subscribe
           </NavLink>
+          </li>
+          <li className='nav-item media-links'>
+            <Media />
           </li>
         </ul>
         <div className='nav-icon' onClick={handleClick}>
